@@ -1,0 +1,70 @@
+// stylesheet :: homepage billboard layout
+
+    // settings
+    $billboard : 1rem;
+    $slideshow_default : calc( 50vh + 5rem );
+    $slideshow_small   : calc( 60vh + 4rem );
+    $slideshow_large   : calc( 65vh + 5rem );
+
+    // styles
+    #video_billboard {
+
+        height: 75vh;
+
+        // content
+        .billboard-content {
+
+            width: 100vw;
+
+        }
+
+        // background
+        #video_background {
+
+            position: absolute;
+
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+
+            z-index: 10;
+
+            // common
+            .video_container {
+
+                position: absolute;
+
+                top: -25%;
+                // right: 0;
+                // bottom: 0;
+                left: -25%;
+
+                width: 150%;
+                height: 150%;
+
+                object-fit: cover;
+
+            }
+
+            // video
+            video {
+
+                @include hide;
+
+                object-fit: cover;
+
+            }
+
+            // video
+            iframe {
+
+                width: 100%;
+
+                object-fit: cover;
+
+            }
+
+        }
+
+    }
