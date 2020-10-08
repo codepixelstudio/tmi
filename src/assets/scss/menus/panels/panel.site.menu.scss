@@ -427,6 +427,47 @@
 
                 }
 
+                // special
+                &.donate {
+
+                    // link
+                    a {
+
+                        // @include color( $campaign );
+
+                        @include fill( $campaign, 0.825 );
+
+                        // hover state
+                        &:hover {
+
+                            @include color( white );
+
+                            @include fill( $campaign, 0.225 );
+
+                            // before
+                            &:before {
+
+                                @include color( white );
+
+                            }
+
+                        }
+
+                        // icon
+                        &:before {
+
+                            @include codicon( 1rem, 1rem, 0, 1rem, $campaign, '\EBAC' );
+
+                            margin: 0 0.5rem 0 0;
+
+                            transition: $all220;
+
+                        }
+
+                    }
+
+                }
+
                 // link
                 a {
 

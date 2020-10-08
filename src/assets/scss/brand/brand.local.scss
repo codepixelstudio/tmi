@@ -9,11 +9,11 @@
         @include flex-h-s-v-c( false );
 
         height: 5rem;
-        padding: 0.0625rem 0 0 0;
+        padding: 0 0 0 0;
 
-        @include font( $klavika, 1rem, 600 );
+        @include font( $klavika, 0.875rem, 600 );
 
-        @include typo( 1.1875rem, 0.015em );
+        @include typo( 1rem, 0.015em );
 
         @include text( $up );
 
@@ -24,9 +24,9 @@
 
             height: 4rem;
 
-            @include font( $klavika, 0.875rem, 600 );
+            @include font( $klavika, 0.75rem, 600 );
 
-            @include typo( 1rem, 0.015em );
+            @include typo( 0.75rem, 0.015em );
 
         }
 
@@ -35,40 +35,84 @@
 
             position: relative;
 
-            width: 3.5rem;
-            height: 3.5rem;
+            width: 5rem;
+            height: 5rem;
 
-            // after
-            &:after {
+            // mobile
+            @include breakpoint ( small only ) {
 
-                content: '';
-
-                position: absolute;
-
-                top: 0.75rem;
-                left: 0.75rem;
-
-                width: 2rem;
-                height: 2rem;
-
-                @include fill( red, 0.465 );
+                width: 4rem;
+                height: 4rem;
 
             }
 
             // svg
             svg {
 
-                // @include hide;
+                // mobile
+                @include breakpoint ( small only ) {
 
-                width: 3.5rem;
-                height: 3.5rem;
+                    width: 4rem;
+                    height: 4rem;
 
-                @include fill( red, 0.265 );
+                }
 
                 // path
                 path {
 
-                    fill: white;
+                    // blue
+                    &.blue {
+
+                        fill: $tmi_blue;
+
+                    }
+
+                    // green
+                    &.green {
+
+                        fill: $tmi_green;
+
+                    }
+
+                }
+
+            }
+
+        }
+
+        // common
+        .local_stack {
+
+            display: block;
+
+            // name
+            &.name {
+
+                @include font( $proxima, 0.6875rem, 500 );
+
+                @include typo( 1rem, 0.035em );
+
+                // mobile
+                @include breakpoint ( small only ) {
+
+                    @include hide;
+
+                }
+
+            }
+
+            // title
+            &.title {
+
+                // line break
+                br {
+
+                    // mobile
+                    @include breakpoint ( medium up ) {
+
+                        @include hide;
+
+                    }
 
                 }
 

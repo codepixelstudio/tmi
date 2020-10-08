@@ -1,7 +1,7 @@
 // stylesheet :: menu component stylesheet compiler
 
     // site.menu
-    // @import 'menu.site';
+    @import 'menu.site';
 
     // base.menu
     // @import 'menu.base';
@@ -10,6 +10,6 @@
     // @import 'menu.toolbar';
 
     // panels
-    // @import 'panels/panels';
+    @import 'panels/panels';
 
     @import 'menu.header';

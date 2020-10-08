@@ -56,7 +56,7 @@ if ( ! function_exists( 'foundationpress_scripts' ) ) :
 		wp_deregister_script( 'jquery-migrate' );
 
 		// Enqueue Foundation scripts
-		wp_enqueue_script( 'cvmbs', get_template_directory_uri() . '/dist/assets/js/' . foundationpress_asset_path( 'cvmbs.app.js' ), array( 'jquery' ), false, true );
+		// wp_enqueue_script( 'cvmbs', get_template_directory_uri() . '/dist/assets/js/' . foundationpress_asset_path( 'cvmbs.app.js' ), array( 'jquery' ), false, true );
 
         // Enqueue Foundation scripts
 		wp_enqueue_script( 'local', get_stylesheet_directory_uri() . '/dist/assets/js/' . foundationpress_asset_path( 'cvmbs.tmi.app.js' ), array( 'jquery' ), '1.0.0', true );
